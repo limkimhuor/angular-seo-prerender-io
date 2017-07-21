@@ -1,11 +1,9 @@
-import './home.scss';
+import angular from "angular";
+import uirouter from "angular-ui-router";
 
-import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import routing from "./home.routes";
+import HomeController from "./home.controller";
 
-import routing from './home.routes';
-import HomeController from './home.controller';
-
-export default angular.module('home', [uirouter])
+export default angular.module("home", [uirouter])
   .config(routing)
-  .controller('HomeController', HomeController);
+  .controller("HomeController", HomeController);
