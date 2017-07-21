@@ -23,6 +23,10 @@ app.use(prerenderio);
 //     res.sendFile(path.resolve(__dirname, "dist", "public.html"));
 // });
 
+app.get("/robots.txt", function(req, res) {
+  res.sendFile(path.resolve(__dirname, "dist", "robots.txt"));
+});
+
 app.get("*", function(req, res) {
   res.sendFile(path.resolve(__dirname, "dist", "public.html"));
 });
